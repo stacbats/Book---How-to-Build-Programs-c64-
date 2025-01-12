@@ -1,4 +1,9 @@
 1 REM From Pagee 11 - Titel Pennies from Heaven
+2 print"{reverse on}{black} get ready - keys are , left & . right{reverse off}"
+10 t=5:t0=ti:print" get ready..."t0
+11 for t=t0+t*60 to t  
+12  t=ti:t=t-5184e4*(t<t0)
+14 next:print"go"t
 20 b$=" L{cm o*3}{sh @} ": REM this is the basket
 30 poke53280,0:poke53281,0: rem the screen colours
 40 ca=0:m1=0:rem variables for caught & missed (set to 0)
@@ -17,7 +22,7 @@
 160 poke209,a-256*int(a/256)
 170 return
 990 rem ************* GAME BEGINS *************
-1000 l=0:c=2:gosub100:print"{yellow}     pennies from  heaven"
+1000 l=0:c=2:gosub100:print"{yellow}     hearts from above.  by s bates"
 1010 l=1:c=2:gosub100:print"{green} caught  0{space*13}{red}missed  0{white}"
 1020 l=22:c=19:gosub100:printb$
 1030 p1=19:rem position of basket on line 22
@@ -39,6 +44,6 @@
 1400 rem caught
 1410 ca=ca+1:                   rem incrment score
 1430 l=1:c=10:  gosub100:printca
-1440 l=22:c=c0: gosub100:print"*"
+1440 l=22:c=c0: gosub100:print"S"
 1450 l=22:c=c0: gosub100:print" "
 1460 next n
